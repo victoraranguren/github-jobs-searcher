@@ -1,5 +1,6 @@
 # Buscador de Trabajos en Github Jobs
 
-- Maquetado con Tailwind CSS mediante CDN
+- Axios para petición HTTPS
 - Vanilla JS
-- Axios para peticion HTTPS
+- Maquetado con Tailwind CSS mediante CDN
+- Compatible con todos los navegadores
