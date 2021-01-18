@@ -4,7 +4,16 @@ const resultado = document.querySelector('#resultado')
 
 const verification = (e)=>{
   e.preventDefault()
-  return input.value ? console.log(`El valor existe y es: ${input.value}`) : showMessages('Está Vacío') 
+  const search = input.value;
+  return search ? consultAPI(search) : showMessages('Está Vacío'); 
+}
+
+const consultAPI = (search)=>{
+  const githubUrl = `https://jobs.github.com/positions.json?search=${search}`
+  const url = `https://api.allorigins.win/get?url=${githubUrl}`;
+
+  axios.get(url)
+    .then(response=> showVacants(JSON.parse(response.data.contents)))
 }
 
 const showMessages =(msg)=>{
