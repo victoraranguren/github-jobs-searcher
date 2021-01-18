@@ -8,17 +8,20 @@ const verification = (e)=>{
 }
 
 const showMessages =(msg)=>{
-  const alert= document.createElement('div');
-
-  alert.classList.add('bg-bray-100', 'p-3', 'mt-3', 'text-center', 'alert');
-
-  alert.textContent = msg;
-
-  form.appendChild(alert)
-
-  setTimeout(() => {
-    alert.remove()
-  }, 3000);
+  const prevAlert= document.querySelector('.alert')
+  if(!prevAlert){
+    const alert= document.createElement('div');
+  
+    alert.classList.add('bg-gray-100', 'p-3', 'mt-3', 'text-center','rounded', 'alert');
+  
+    alert.textContent = msg;
+  
+    form.appendChild(alert)
+  
+    setTimeout(() => {
+      alert.remove()
+    }, 3000);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
