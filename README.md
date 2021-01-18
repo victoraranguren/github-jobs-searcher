@@ -4,3 +4,5 @@
 - Vanilla JS
 - Maquetado con Tailwind CSS mediante CDN
 - Compatible con todos los navegadores
+
+![Screenshot](img/screenshot.png) 
