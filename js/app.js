@@ -22,11 +22,10 @@ const showVacants = (vacants)=>{
   }
 
   if (vacants.length > 0) {
-    resultado.classList.add('grid')
     vacants.forEach(vacant => {
       const {company, type, url, title} = vacant;
       resultado.innerHTML+= `
-      <div class="shadow bg-white mt-5 p-6 rounded">
+      <div class="cols-span-1 cols-start-1 md:row-span-1 md:col-span-2 md:cols-start-auto shadow bg-white mt-5 p-6 rounded">
         <h2 class="text-2xl font-light mb-4">${title}</h2>
         <p class="font-bold uppercase">Compañia:  <span class="font-light normal-case">${company} </span></p>
         <p class="font-bold uppercase">Tipo de Contrato:   <span class="font-light normal-case">${type} </span></p>
